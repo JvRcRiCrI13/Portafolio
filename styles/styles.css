@@ -1,0 +1,121 @@
+:root {
+    --color-primario:#03071E;
+    --color-secundario:#FAA307;
+    --color-terciario:#F6F6F6;
+    --fuente-arial:Arial, Helvetica, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+ background-color: var(--color-primario);
+ box-sizing: border-box;
+}
+.header {
+    padding: 2% 0% 0% 15%;
+}
+.header__menu {
+    display: flex;
+    gap: 80px;
+}
+.header__menu__link {
+    font-family: var(--fuente-arial );
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+.presentacion {
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    gap: 82px;
+    justify-content: space-between;
+}
+.presentacion__contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.presentacion__titulo {
+    font-size: 2.25rem;
+    color: var(--color-terciario);  
+}
+.destacado {
+    color: var(--color-secundario);
+}
+.introduccion {
+    font-family: var(--fuente-arial); 
+    color: var(--color-terciario);
+    font-size: 1.25rem;
+}
+.botones__enlaces {
+    display:flex; /*Coloca los cuadrados uno al lado del otro*/
+    justify-content:space-around; 
+    flex-direction: column;
+    align-items: center;
+    gap: 32px; /*Agrega espacios iguales entre cada cuadro*/
+}
+.boton__enlaces__link {
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family:var(--fuente-arial);
+    font-weight: 600;
+    color: #F6F6F6;
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: 2px solid var(--color-secundario);
+    transition: all 0.3s ease-in;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.boton__enlaces__link:hover {
+    background-color: #0d1129;
+}
+.botones__enlaces__subtitulo {
+    font-family: var(--fuente-arial);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-terciario);
+}
+.imagen {
+    width: 50%; 
+    border-radius: 8px; 
+}
+.footer {
+    background-color: var(--color-secundario);
+    text-align: center;
+    color: var(--color-primario);
+    padding: 14px;
+    font-family: var(--fuente-arial);
+    font-size: 1.125rem;
+    font-weight: 400;
+}
+@media (max-width: 1200px) {
+
+    .header {
+        padding: 5%;
+    }
+    .header__menu {
+        justify-content: center;
+    }
+
+    .presentacion {
+        flex-direction: column-reverse; 
+        padding: 5%;  
+    }
+    .presentacion__contenido {
+        width: auto;
+    }
+    .boton__enlaces__link{
+        padding: 5%;
+    }
+}
